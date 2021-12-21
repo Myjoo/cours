@@ -6,7 +6,9 @@
 int main() {
         int nb = 862, tSize = 3;
         int tab [] = {5, 7, 3};
-        int *copy = NULL;
+        int tab2 [] = {1,2,3,4,5};
+        int copy [tSize], invCopy[5];
+        int multiplication [10][10];
 
         NbChiffre(nb);
 
@@ -16,8 +18,15 @@ int main() {
 
         MaxTableau(tab, tSize);
 
-        copy = ArrayCopy(tab, tSize);
+        ArrayCopy(copy, tab, tSize);
         AfficherTableau(copy, tSize);
+
+        InvertedArrayCopy(invCopy, tab2, 5);
+        AfficherTableau(tab2, 5);
+        AfficherTableau(invCopy, 5);
+
+        remplirTableau2D(multiplication, 10);
+        AfficherTableau2D(multiplication,10,10);
 
         return 0;
 }

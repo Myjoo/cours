@@ -42,15 +42,45 @@ void MaxTableau (int tab [], int tSize) {
         printf("Max du tableau : %d\n", max);
 }
 // EX 52 - Copie d'un tableau dans un autre
-int * ArrayCopy (int tab [], int tSize) {
-        int copy [tSize], i;
+void ArrayCopy (int copy[], int tab [], int tSize) {
+        int i;
         for (size_t i = 0; i < tSize; i++)
         {
                 copy[i] = tab[i];
         }
-        return copy;
 }
 // EX 53 - Copie inversé d'un tableau
+void InvertedArrayCopy (int copy[], int tab [], int tSize) {
+        int i, y = tSize - 1;
+        for (size_t i = 0; i < tSize; i++)
+        {
+                copy[y] = tab[i];
+                y--;
+        }
+}
+// EX 54 - Afficher tableau de multiplication en utilisant un tableau en 2D
+void remplirTableau2D (int tab [][10], int tSize) {
+        int i,y;
+        for (size_t i = 0; i < tSize; i++)
+        {
+                for (size_t y = 0; y < tSize; y++)
+                {
+                        tab[i][y] = (i + 1) * (y + 1);
+                }
+        }
+}
+void AfficherTableau2D (int tab [][10], int colSize, int rowSize) {
+        int i,y;
+        for (size_t i = 0; i < colSize; i++)
+        {
+                for (size_t y = 0; y < rowSize; y++)
+                {
+                        printf("%d\t",tab[i][y]);
+                }
+                printf("\n");
+        }
+        
+}
 
 // EX 57 - Copie inversé d'un tableau de String
 
