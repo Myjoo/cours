@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include <string.h>
+#define PASSWORD "1234"
 
 // EX 49 - Nombre chiffre dans un nombre
 void NbChiffre(int a){
@@ -81,7 +82,31 @@ void AfficherTableau2D (int tab [][10], int colSize, int rowSize) {
         }
         
 }
+// EX 55 - Créer un tableau avec la série suivante : 1-10-2-9-3-8-4-7-5-6
+void RemplirTableauSerie (int tab[], int tSize) {
+        int i;
+        for (size_t i = 0; i < tSize; i++)
+        {
+                if (i % 2)
+                {
+                        tab[i] = (tSize - i + 1) + i/2;
+                } else  tab[i] = (i + 1) - i/2;
+        }      
+}
+// EX 56 - Demander le password un maximum de 3x
+void Password () {
+        int i=0;
+        char p [5];
+        do{
+                i++;
+                printf("Entrer mot de passe : ");
+                fflush(stdin);
+                scanf("%5s", p);
+        }while((i < 3) && ((strcmp(p, PASSWORD))));
 
+        if(i == 3) printf("Erreur, trop d'essai");
+        else printf("Bienvenue");
+}
 // EX 57 - Copie inversé d'un tableau de String
 
 void AfficherTableau(int tab [], int tSize) {

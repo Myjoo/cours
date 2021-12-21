@@ -9,6 +9,7 @@ int main() {
         int tab2 [] = {1,2,3,4,5};
         int copy [tSize], invCopy[5];
         int multiplication [10][10];
+        int ex55 [10];
 
         NbChiffre(nb);
 
@@ -27,6 +28,11 @@ int main() {
 
         remplirTableau2D(multiplication, 10);
         AfficherTableau2D(multiplication,10,10);
+
+        RemplirTableauSerie(ex55, 10);
+        AfficherTableau(ex55, 10);
+
+        Password();
 
         return 0;
 }
