@@ -11,6 +11,7 @@ void remplirTableau2D (int tab [][10], int tSize);
 void AfficherTableau2D (int tab [][10], int colSize, int rowSize);
 void RemplirTableauSerie (int tab[], int tSize);
 void Password ();
+void InvertedString (char sCopy [],char string [], int sSize);
 void AfficherTableau(int tab [], int tSize);
 
 #endif

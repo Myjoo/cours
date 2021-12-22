@@ -108,6 +108,20 @@ void Password () {
         else printf("Bienvenue");
 }
 // EX 57 - Copie inversé d'un tableau de String
+void InvertedString (char sCopy [],char string [], int sSize){
+        int i, y = sSize - 2;
+        for (size_t i = 0; i < sSize - 1; i++)
+        {
+                sCopy[i] = string[y];
+                y--;
+        }
+        sCopy[sSize-1] = '\0';
+}
+// EX 58 - Encoder dans une chaine de caractère un calcul du style « 8+3 ». Le programme donne le résultat
+
+// EX 59 - Donner le nombre de chiffre présent dans une chaîne de caractères
+
+// EX 60 - Vérifier si string est un palindrome
 
 void AfficherTableau(int tab [], int tSize) {
         int i;

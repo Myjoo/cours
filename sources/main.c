@@ -10,6 +10,9 @@ int main() {
         int copy [tSize], invCopy[5];
         int multiplication [10][10];
         int ex55 [10];
+        char string [] = "Bonjour";
+        int sSize = 8;
+        char sInvCopy [sSize];
 
         NbChiffre(nb);
 
@@ -33,6 +36,9 @@ int main() {
         AfficherTableau(ex55, 10);
 
         Password();
+
+        InvertedString(sInvCopy, string, sSize);
+        printf("\n%s", sInvCopy);
 
         return 0;
 }
