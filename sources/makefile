@@ -1,5 +1,7 @@
 # progg: main.c mesFonctions.c
 # 	clang -o progg main.c mesFonctions.c -I.
+# mingw32-make
+#./progg
 
 CC=gcc
 CFLAGS=-I.

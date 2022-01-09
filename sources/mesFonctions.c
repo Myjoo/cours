@@ -102,10 +102,10 @@ void Password () {
                 printf("Entrer mot de passe : ");
                 fflush(stdin);
                 scanf("%5s", p);
-        }while((i < 3) && ((strcmp(p, PASSWORD))));
+        }while((i < 3) && (strcmp(p, PASSWORD)));
 
-        if(i == 3) printf("Erreur, trop d'essai");
-        else printf("Bienvenue");
+        if(strcmp(p, PASSWORD) == 0) printf("Bienvenue");
+        else printf("Erreur, trop d'essai");
 }
 // EX 57 - Copie inversé d'un tableau de String
 void InvertedString (char sCopy [],char string [], int sSize){
