@@ -3,7 +3,7 @@
 # mingw32-make
 #./progg
 
-CC=gcc
+CC=clang
 CFLAGS=-I.
 
 progg: main.o mesFonctions.o

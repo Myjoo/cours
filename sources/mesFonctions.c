@@ -72,9 +72,9 @@ void remplirTableau2D (int tab [][10], int tSize) {
 }
 void AfficherTableau2D (int tab [][10], int colSize, int rowSize) {
         int i,y;
-        for (size_t i = 0; i < colSize; i++)
+        for (size_t i = 0; i < rowSize; i++)
         {
-                for (size_t y = 0; y < rowSize; y++)
+                for (size_t y = 0; y < colSize; y++)
                 {
                         printf("%d\t",tab[i][y]);
                 }
@@ -104,8 +104,8 @@ void Password () {
                 scanf("%5s", p);
         }while((i < 3) && (strcmp(p, PASSWORD)));
 
-        if(strcmp(p, PASSWORD) == 0) printf("Bienvenue");
-        else printf("Erreur, trop d'essai");
+        if(strcmp(p, PASSWORD) == 0) printf("Bienvenue\n");
+        else printf("Erreur, trop d'essai\n");
 }
 // EX 57 - Copie inversé d'un tableau de String
 void InvertedString (char sCopy [],char string [], int sSize){
@@ -118,10 +118,68 @@ void InvertedString (char sCopy [],char string [], int sSize){
         sCopy[sSize-1] = '\0';
 }
 // EX 58 - Encoder dans une chaine de caractère un calcul du style « 8+3 ». Le programme donne le résultat
+void Calculatrice (char s [], int sSize) {
+        double resultat = 0, num1, num2;
+        int i = 0; 
+        char operateur;
+
+        num1 = atof(s);
+
+        while ( (! ((s[i] == '+') || (s[i] == '-') || (s[i] == 'x') || (s[i] == '/')) ) && (i < sSize) )
+        {       
+                s[i] = '0';
+                i++;
+        }
+        operateur = s[i];
+        s[i] = '0';
+        num2 = atof(s);
+
+
+        switch (operateur)
+        {
+        case '+':
+                resultat = num1 + num2;
+                break;
+        case '-':
+                resultat = num1 - num2;
+                break;
+        case 'x':
+                resultat = num1 * num2;
+                break;
+        case '/':
+                resultat = num1 / num2;
+                break;
+        default:
+                printf("Erreur");
+        }
+
+        printf("%.1f %c %.1f = %.1f\n", num1, operateur, num2, resultat);
+}
 
 // EX 59 - Donner le nombre de chiffre présent dans une chaîne de caractères
+void NbChiffreinStr (char s [], int sSize) {
+        int nb = 0;
+        for (size_t i = 0; i < sSize; i++)
+        {
+                if ((s[i] > 47) && (s[i] < 58)) nb++; 
+        }
+        printf("Il y a %d nombre dans la chaine %s\n", nb, s);
+}
 
 // EX 60 - Vérifier si string est un palindrome
+void EstPalindrome (char s [], int  sSize){
+        int i = 0, y = sSize -2, palind = 0;
+        while ((i < sSize -1) && (s[i] == s[y]))
+        {       
+                printf("%c \t %c\n", s[i], s[y]);
+                i++;
+                y--;
+        }
+        if (y == -1) palind = 1;
+        if (palind) printf("Est un palindrome\n");
+        else printf("N'est pas un palindrome\n");
+}
+
 
 void AfficherTableau(int tab [], int tSize) {
         int i;

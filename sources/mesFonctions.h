@@ -12,6 +12,9 @@ void AfficherTableau2D (int tab [][10], int colSize, int rowSize);
 void RemplirTableauSerie (int tab[], int tSize);
 void Password ();
 void InvertedString (char sCopy [],char string [], int sSize);
+void Calculatrice (char s [], int sSize);
+void NbChiffreinStr (char s [], int sSize);
+void EstPalindrome (char s [], int  sSize);
 void AfficherTableau(int tab [], int tSize);
 
 #endif
