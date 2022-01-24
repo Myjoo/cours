@@ -167,7 +167,7 @@ void NbChiffreinStr (char s [], int sSize) {
 }
 
 // EX 60 - Vérifier si string est un palindrome
-void EstPalindrome (char s [], int  sSize){
+void EstPalindrome (char s [], int  sSize) {
         int i = 0, y = sSize -2, palind = 0;
         while ((i < sSize -1) && (s[i] == s[y]))
         {       
@@ -180,6 +180,92 @@ void EstPalindrome (char s [], int  sSize){
         else printf("N'est pas un palindrome\n");
 }
 
+// EX Supplémentaire 1 - Tab[51] entrer 2 prénoms 1 au début l'autre à la fin -- entre les 2 prénoms
+void RemplirPrenom (char toFill[], char pre1 [], char pre2 []) {
+        int sizePre1 = strlen(pre1), sizePre2 = strlen(pre2), i;
+    
+        strcat(toFill, pre1);
+
+        for (size_t i = sizePre1; i < 50 - sizePre2; i++)
+        {
+                toFill[i] = '-';
+        }
+        strcat(toFill, pre2);
+}
+// EX Supplémentaire 2 - inversion tab int
+void InvTabInt (int tabInv[], int tab[], int tSize) {
+        int i, y = tSize - 1;
+        for (size_t i = 0; i < tSize; i++)
+        {
+                tabInv[i] = tab[y];
+                y--;
+        }
+        
+}
+// EX Supplémentaire 3 - Conversion binaire
+void ConvBin (int bin[], int tSize, int nb) {
+        int i ;
+
+        for(i = 0; i < tSize; i++) 
+        {
+                if(nb != 0) {
+                        bin[i] = nb % 2;
+                        nb = (nb - bin[i]) / 2;
+                } else bin[i] = 0;
+        } 
+}
+// EX Supplémentaire 4 - Numéro de compte (001-2259888-57) 10 chiffres / 97 modulo 
+// (BE23 1236 4789 1456) %97 = les deux chiffres de fin 
+void VerifCompte (char nCompte [], int sSize) {
+        char nCompteBis[13];
+        int i, j = 0, intCompte, nbVerif, algo;
+        if (sSize == 15) sSize = 12;
+        else sSize = 15;
+
+
+        switch (sSize)
+        {
+        case 12:
+                algo = atoi(nCompte);
+                // 100 000 000 et 90 000 000
+                algo = ((algo - 1) * 100000000) + 90000000;
+                nCompte[3] = '0';
+                intCompte = atoi(nCompte);
+
+                //On récup la valeur d'origine
+                intCompte -= algo;
+
+                //On récup le chiffre de vérification
+                for (size_t i = 0; i < sSize; i++)
+                {
+                        nCompte[i] = '0';
+                }
+                nbVerif = atoi(nCompte);                
+                break;
+        case 15:
+                for (size_t i = 2; i < sSize + 2; i++)
+                {   
+                        if(nCompte[i] == 32) i++;
+                        nCompteBis[j] = nCompte[i];
+                        j++;
+                }
+                nCompteBis[j] = '\0';
+                nCompteBis[9] = 'b';
+                intCompte = atoi(nCompteBis);
+
+                printf("%s\n", nCompteBis);
+                printf("%d\n", intCompte);
+                
+                break;
+        default:
+                printf("Erreur");
+        }
+
+        if (nbVerif == (intCompte % 97)) printf("%d = %d. Le compte est valide\n", nbVerif, intCompte % 97);
+        else printf("%d != %d. Le compte est invalide", nbVerif, intCompte % 97);
+}
+
+// EX Supplémentaire 5 - Tab (1, 45, 89, 14, 25, 3, 58, 101, 87, 56) Afficher le nb juste avant le plus grand (ici 89)
 
 void AfficherTableau(int tab [], int tSize) {
         int i;
