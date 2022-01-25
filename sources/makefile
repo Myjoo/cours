@@ -6,8 +6,11 @@
 CC=clang
 CFLAGS=-I.
 
-progg: main.o mesFonctions.o
-	$(CC) -o progg main.o mesFonctions.o
+struct: struct.o
+	$(CC) -o struct struct.o
+
+progg: main.o mesFonctions.o 
+	$(CC) -o progg main.o mesFonctions.o 
 
 clean:
 	rm -rf *.exe
