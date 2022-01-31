@@ -4,11 +4,9 @@
 #./progg
 #clang / gcc
 
-CC=gcc
+CC=clang
 CFLAGS=-I.
 
-struct: struct.o
-	$(CC) -o struct struct.o
 
 progg: main.o mesFonctions.o 
 	$(CC) -o progg main.o mesFonctions.o 
@@ -16,3 +14,6 @@ progg: main.o mesFonctions.o
 clean:
 	rm -rf *.exe
 	rm -rf *.o
+
+struct: struct.o
+	$(CC) -o struct struct.o

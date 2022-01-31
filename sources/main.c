@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "mesFonctions.h"
 #define TVA 0.21
 
@@ -68,12 +69,18 @@ int main() {
         // InvTabInt(invInt, binary, 10);
         // AfficherTableau(invInt, 10);
 
-        // 001-2259888-57
-        char account [] = "001-2259888-57";
-        char account2 [] = "BE23 1236 4789 1456";
+        // char account [] = "001-2259888-57";
+        // char account2 [] = "BE23 1236 4789 1429";
+        // char account3 [] = "BE71 0961 2345 6769";
 
         // VerifCompte(account, sizeof(account)/sizeof(char));
-        VerifCompte(account2, sizeof(account2)/sizeof(char));
+        // VerifCompte(account2, sizeof(account2)/sizeof(char));
+        // VerifCompte(account3, sizeof(account2)/sizeof(char));
+
+
+        int sndBiggest [] = {1, 45, 89, 14, 25, 3, 58, 101, 87, 56};
+        int tabSize = 10;
+        NbJusteAvantGrand(sndBiggest, tabSize);
 
         printf("\n");
         return 0;

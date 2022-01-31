@@ -215,12 +215,12 @@ void ConvBin (int bin[], int tSize, int nb) {
         } 
 }
 // EX Supplémentaire 4 - Numéro de compte (001-2259888-57) 10 chiffres / 97 modulo 
-// (BE23 1236 4789 1456) %97 = les deux chiffres de fin 
+// (BE23 1236 4789 1429) %97 = les deux chiffres de fin 
 void VerifCompte (char nCompte [], int sSize) {
         char nCompteBis[13];
         int i, j = 0, intCompte, nbVerif, algo;
         if (sSize == 15) sSize = 12;
-        else sSize = 15;
+        else sSize = 17;
 
 
         switch (sSize)
@@ -234,38 +234,48 @@ void VerifCompte (char nCompte [], int sSize) {
 
                 //On récup la valeur d'origine
                 intCompte -= algo;
-
-                //On récup le chiffre de vérification
-                for (size_t i = 0; i < sSize; i++)
-                {
-                        nCompte[i] = '0';
-                }
-                nbVerif = atoi(nCompte);                
+              
                 break;
-        case 15:
-                for (size_t i = 2; i < sSize + 2; i++)
+        case 17:
+                for (size_t i = 5; i < sSize; i++)
                 {   
                         if(nCompte[i] == 32) i++;
                         nCompteBis[j] = nCompte[i];
                         j++;
                 }
                 nCompteBis[j] = '\0';
-                nCompteBis[9] = 'b';
                 intCompte = atoi(nCompteBis);
-
-                printf("%s\n", nCompteBis);
-                printf("%d\n", intCompte);
                 
                 break;
         default:
                 printf("Erreur");
         }
 
+        //On récup le chiffre de vérification
+                for (size_t i = 0; i < sSize; i++)
+                {
+                        nCompte[i] = '0';
+                }
+                nbVerif = atoi(nCompte); 
+
         if (nbVerif == (intCompte % 97)) printf("%d = %d. Le compte est valide\n", nbVerif, intCompte % 97);
-        else printf("%d != %d. Le compte est invalide", nbVerif, intCompte % 97);
+        else printf("%d != %d. Le compte est invalide\n", nbVerif, intCompte % 97);
 }
 
 // EX Supplémentaire 5 - Tab (1, 45, 89, 14, 25, 3, 58, 101, 87, 56) Afficher le nb juste avant le plus grand (ici 89)
+void NbJusteAvantGrand (int tab [], int tSize) {
+        int i, max = tab[0], sndMax = tab[0];
+
+
+        for (size_t i = 1; i < tSize; i++)
+        {
+                if(tab[i] > max) {
+                        sndMax = max;
+                        max = tab[i];
+                }
+        }
+        printf("Le 2eme nombre le plus grand du tab est : %d\n",sndMax);
+}
 
 void AfficherTableau(int tab [], int tSize) {
         int i;

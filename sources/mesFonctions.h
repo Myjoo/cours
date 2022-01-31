@@ -19,6 +19,7 @@ void RemplirPrenom (char toFill[], char pre1 [], char pre2 []);
 void InvTabInt (int tabInv[], int tab[], int tSize);
 void ConvBin (int bin[], int tSize, int nb);
 void VerifCompte (char nCompte [], int sSize);
+void NbJusteAvantGrand (int tab [], int tSize);
 void AfficherTableau(int tab [], int tSize);
 
 #endif
