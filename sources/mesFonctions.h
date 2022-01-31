@@ -15,6 +15,10 @@ void InvertedString (char sCopy [],char string [], int sSize);
 void Calculatrice (char s [], int sSize);
 void NbChiffreinStr (char s [], int sSize);
 void EstPalindrome (char s [], int  sSize);
+void RemplirPrenom (char toFill[], char pre1 [], char pre2 []);
+void InvTabInt (int tabInv[], int tab[], int tSize);
+void ConvBin (int bin[], int tSize, int nb);
+void VerifCompte (char nCompte [], int sSize);
 void AfficherTableau(int tab [], int tSize);
 
 #endif

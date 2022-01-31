@@ -20,6 +20,10 @@ int main() {
         char nbChiffre[] = "1abc2ef57 3f";
         char pal [] = "kayak";
         char notPal [] = "Henri";
+        char pre1 [] = "Georges";
+        char pre2 [] = "Philippe";
+        char toFill [51];
+        int binary[10], invInt[10];
 
         // NbChiffre(nb);
 
@@ -54,8 +58,22 @@ int main() {
 
         // NbChiffreinStr (nbChiffre, sizeof(nbChiffre));
 
-        EstPalindrome(pal, sizeof(pal));
-        EstPalindrome(notPal, sizeof(notPal));
+        // EstPalindrome(pal, sizeof(pal));
+        // EstPalindrome(notPal, sizeof(notPal));
+
+        // RemplirPrenom(toFill, pre1, pre2);
+        // printf("%s\n", toFill);
+     
+        // ConvBin(binary,10, 12);
+        // InvTabInt(invInt, binary, 10);
+        // AfficherTableau(invInt, 10);
+
+        // 001-2259888-57
+        char account [] = "001-2259888-57";
+        char account2 [] = "BE23 1236 4789 1456";
+
+        // VerifCompte(account, sizeof(account)/sizeof(char));
+        VerifCompte(account2, sizeof(account2)/sizeof(char));
 
         printf("\n");
         return 0;

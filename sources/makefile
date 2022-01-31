@@ -2,8 +2,9 @@
 # 	clang -o progg main.c mesFonctions.c -I.
 # mingw32-make
 #./progg
+#clang / gcc
 
-CC=clang
+CC=gcc
 CFLAGS=-I.
 
 struct: struct.o
