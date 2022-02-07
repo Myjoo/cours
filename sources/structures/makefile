@@ -7,7 +7,7 @@
 CC=clang
 CFLAGS=-I.
 
-struct: main.o StructFunc.o
+struct: main.o StructFunc.o 
 	$(CC) -o struct main.o StructFunc.o
 
 clean:
