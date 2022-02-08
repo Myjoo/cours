@@ -6,6 +6,10 @@
 
 CC=clang
 CFLAGS=-I.
+DEPS = Struct.h StructFunc.h
+
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
 
 struct: main.o StructFunc.o 
 	$(CC) -o struct main.o StructFunc.o

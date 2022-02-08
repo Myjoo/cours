@@ -30,6 +30,7 @@ Personnes * NewPersonne (Personnes * header, Personnes * p, char nom [], char pr
 
     strcpy(p->nom, nom);
     strcpy(p->prenom, prenom);
+    p->dat = date;
     p->sex = (Sexe) temp;
     p->next = header;
 

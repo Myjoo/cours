@@ -43,7 +43,7 @@ int main () {
 
     ParcourirStruct(header);
 
-    PrintDate(d1);
+    PrintDate(p6->dat);
 
     //Struct date naissance (jour,mois,annee) et Struct pilote (nom, date) et 
     //struct voiture (int num plaque, enum marque, tab[] pilote)

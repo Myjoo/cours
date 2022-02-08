@@ -20,7 +20,7 @@ typedef struct Personnes
 {
     char nom [15];
     char prenom [15];
-    Date * dat;
+    struct Date * dat;
     Sexe sex;
     Personnes * next;
 }Personnes;
