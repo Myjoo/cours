@@ -14,6 +14,9 @@ DEPS = Struct.h StructFunc.h
 struct: main.o StructFunc.o 
 	$(CC) -o struct main.o StructFunc.o
 
+files: files.o
+	$(CC) -o files files.o 
+
 clean:
 	rm -rf *.exe
 	rm -rf *.o

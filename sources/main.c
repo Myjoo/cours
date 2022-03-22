@@ -78,9 +78,10 @@ int main() {
         // VerifCompte(account3, sizeof(account2)/sizeof(char));
 
 
-        int sndBiggest [] = {1, 45, 89, 14, 25, 3, 58, 101, 87, 56};
-        int tabSize = 10;
-        NbJusteAvantGrand(sndBiggest, tabSize);
+        // int sndBiggest [] = {1, 45, 89, 14, 25, 3, 58, 101, 87, 56};
+        // int tabSize = 10;
+        // NbJusteAvantGrand(sndBiggest, tabSize);
+
 
         printf("\n");
         return 0;

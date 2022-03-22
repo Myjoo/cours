@@ -46,7 +46,7 @@ int main () {
     PrintDate(p6->dat);
 
     //Struct date naissance (jour,mois,annee) et Struct pilote (nom, date) et 
-    //struct voiture (int num plaque, enum marque, tab[] pilote)
+    //struct voiture (int num plaque, enum marque, pilote)
     // => Faire un tableau de 3 voitures
     //Hardcoder 2 voitures et 3eme demander num / marque / etc...
     // Afficher tab des 3 voitures avec tous les datas
